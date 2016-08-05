@@ -42,6 +42,7 @@ import sys
 import smtplib
 import subprocess
 import argparse
+
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEBase import MIMEBase
 from email.MIMEText import MIMEText
@@ -89,7 +90,7 @@ def email_result(cmd, recipient):
     msg['Date'] = formatdate(localtime=True)
     
     if returncode == 0:
-        msg['Subject'] = 'send command output script completed successfully'.format(cmd)
+        msg['Subject'] = 'SUCCESS: command output email completed successfully.'.format(cmd)
     else:
         msg['Subject'] = 'ERROR: script or system returned exit status {0}'.format(returncode) 
  
