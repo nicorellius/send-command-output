@@ -1,24 +1,42 @@
 #!/usr/bin/env python
 
-# Author        :   Nick Vincent-Maloney <nick@nicorelli.us>
-# Date          :   2016-08-04
-# Requirements  :   Python 2.7 or higher  
-# Notes         
-# Usage         :   send_cmd_output.py [-h] email cmd
-#
+# MIT License
+
+# Copyright (c) 2016 Nick Vincent-Maloneyi <nick@nicorelli.us>
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+ 
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+ 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+ 
+# Requirements  : Python 2.7 or higher  
+# Usage         : send_cmd_output.py [-h] email cmd
+
 # Sends message with optional attachment containing stdout and stderr for any given command.
-#
+
 # Positional arguments
 # email         the email address to send output to
 # cmd           the command and arguments to execute. If you need arguments,
 #               wrap the whole command in quotes.
-#
+
 # optional arguments:
 # -h, --help  show this help message and exit
 
 # Example usage for running rysnc:
 # send_cmd_output.py email@example.com 'rsync -va --no-perms /stuff/to/backup /where/to/put/backup'            
-
 
 import sys
 import smtplib
